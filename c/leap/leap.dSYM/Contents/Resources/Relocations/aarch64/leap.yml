@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/karlosiric/Exercism/c/leap/leap'
+relocations:     []
+...
