@@ -7,7 +7,8 @@
 /* takes too long for tester to run this */
 
 int steps(int start) {
-    
+
+ 
     int64_t count = 0;
     int64_t n = (int64_t) start;
 
