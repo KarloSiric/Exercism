@@ -1,30 +1,36 @@
 #include "collatz_conjecture.h"
-#include <stdio.h>
+#include <stdint.h>
+
+/* for recursion to keep track of count we need another parameter so... */
+
+
+/* takes too long for tester to run this */
 
 int steps(int start) {
+    
+    int64_t count = 0;
+    int64_t n = (int64_t) start;
 
-    while(start != 1) {
-        if ((start % 2 == 0) && (start / 2 != 1)) {
-            
-        }
-
-
-        if (start % 2 == 0) {
-            start = start / 2;
-        } else {
-            start = ((start * 3) + 1);
-        }
-        printf("%d ", start);
+    if (n <= 0) {
+        return ERROR_VALUE; // error negative number
     }
+
+    if (n == 1) {
+        return 0;
+    }
+
+    while(n != 1) { 
+
+        if (n % 2 == 0) {
+            n = n >> 1;
+            count++;
+        } else {
+            n = 3 * n + 1;
+            count++;
+        }
+    }
+
+    return count;
 }
 
-int main(void) {
 
-    int number;
-    printf("Enter any number: ");
-    scanf("%d", &number);
-
-    steps(number);
-
-    return 0;
-}
