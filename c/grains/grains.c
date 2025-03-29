@@ -32,11 +32,11 @@ uint64_t total(void) {
 
     uint64_t sum = 0; // because int can store 32 bits or 4 bytes and this stores 64 bits values so double that which helps us be precise
     uint8_t index;
-
+    
     for (index = 1; index < 66; index++) {
         sum += square(index);
     }
-
+    
     return sum;
 }
 
