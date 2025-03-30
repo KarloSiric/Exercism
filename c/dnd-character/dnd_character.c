@@ -27,7 +27,7 @@ int ability(void) {
             min_roll = rolls[i];
         }
     }
-
+    
     return sum - min_roll; // here we return that sum that we ahve total sum minus the rolls that is random or something so we have this...
 }
 
@@ -49,7 +49,7 @@ dnd_character_t make_dnd_character(void) {
     character.intelligence = ability();
     character.wisdom = ability();
     character.charisma = ability();
-        
+
     character.hitpoints = 10 + modifier(character.constitution);
 
     return character;
