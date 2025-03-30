@@ -4,6 +4,7 @@
 
 void convert(char result[], int drops) {
 
+
     if (drops % 3 == 0) {
         strcat(result, "Pling");   
     }
@@ -13,8 +14,10 @@ void convert(char result[], int drops) {
     if (drops % 7 == 0) {
         strcat(result, "Plong");
     }
+    if (result[0] == '\0') {
+        sprintf(result, "%d", drops);
+    }
 
     
-
 
 }
